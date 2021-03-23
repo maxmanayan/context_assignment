@@ -3,17 +3,14 @@ import { Button, Form } from "semantic-ui-react"
 import { UserContext } from "../providers/UserProvider"
 
 const UpdateUserForm = () => {
-  const {firstName, lastName, email, jobDescription, setUser} = useContext(UserContext)
-  const [profile, setProfile] = useState({firstName, lastName, email, jobDescription})
+  const {firstName, lastName, email, jobDescription, setUser, avatar} = useContext(UserContext)
+  const [profile, setProfile] = useState({firstName, lastName, email, jobDescription, avatar})
 
   const handleSubmit = () => {
     setUser({...profile})
   }
 
   const handleChange = (e, {name, value}) => {
-    console.log('handledChange')
-    console.log(name)
-    console.log(value)
     setProfile({
       ...profile,
       [name]:value
