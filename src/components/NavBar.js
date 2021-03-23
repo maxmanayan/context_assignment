@@ -17,6 +17,11 @@ const NavBar = () => {
           {firstName}
         </Menu.Item>
       </NavLink>
+      <NavLink to="/user/colleagues">
+        <Menu.Item>
+          {firstName}'s Colleagues
+        </Menu.Item>
+      </NavLink>
     </Menu>
   )
 }

@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import UserProvider from './providers/UserProvider';
+import UserColleaguesProvider from './providers/UserColleaguesProvider';
 
 ReactDOM.render(
   <UserProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <UserColleaguesProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </UserColleaguesProvider>
   </UserProvider>,
   document.getElementById('root')
 );
